@@ -1,0 +1,117 @@
+.pricingComponent {
+   
+    width: 80vw;
+    border-radius: 0.75rem;
+    box-shadow: 0px 16px 90px rgba(0,0,0,0.25); 
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: $bgWhite;
+    
+    h4, h1{
+        align-self: center;
+    }
+   
+    .dollarMonth{
+        color: $DarkDesaturatedBlue;
+        span{
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: $GrayishBlue;
+        }
+    }
+    
+    .pageViews{
+        color: $GrayishBlue;
+        letter-spacing: 0.1em;
+    }
+
+
+}
+
+.billing{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $LightGrayishBlue ;
+    
+    p{
+        font-size: 0.85em;
+        color: $GrayishBlue;
+        
+        span{
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            color: $LightRed;
+            background: $LightGrayishRed;
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+#billingSwitch{
+    opacity: 0;
+}
+
+.billingSlider {
+    position: relative; display: block;
+    width: 2.7em; height: 1.5em;
+    top:0.5rem;
+    left: -0.5rem;
+    cursor: pointer;
+    border-radius: 1.5em;
+    transition: 350ms;
+    background: $LightGrayishBlue
+    
+}
+
+// ********** Switch:
+.billingSlider::before {
+  position: absolute; 
+  content:'';
+  width: 1em; height: 1em;
+  top: 0.25em; left: 0.25em;
+  border-radius: 50%;
+  transition: 150ms ease-in-out;
+  background-color: $bgWhite;
+  
+}
+input:checked + .billingSlider::before {
+	left: 1.25em;
+}
+
+.features{
+    ul{
+        margin-left: -2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+        list-style-type: none;
+    }
+    li {
+        font-size: 0.8rem;        
+        color: $GrayishBlue;
+        padding: 0.5rem;
+
+    }
+    svg{
+        margin-right: 0.75rem;
+    }
+}
+
+.cta{
+    font-weight: 800;
+    align-self: center;
+    width: fit-content;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: $DarkDesaturatedBlue;
+    color: $LightGrayishBlue;
+}
